@@ -1,4 +1,15 @@
 <h2> Hello world!</h2>
+
+<% first_product = Product.first %>
+<% second_product = Product.where("price > 500").first %>
+
 <p>
-  Find me in <%= Rails.root.join("app", "views", "products", __FILE__ ) %>
+Product Name: <%= first_product.name %> costs $<%= first_product.price %>
 </p>
+<p>Seller Name: <%= first_product.user.name %></p>
+<p>--</p>
+
+<p>
+Product Name: <%= second_product.name %> costs $<%= second_product.price %>
+</p>
+<p>Seller Name: <%= second_product.user.name %></p>
