@@ -13,3 +13,6 @@ Product Name: <%= first_product.name %> costs $<%= first_product.price %>
 Product Name: <%= second_product.name %> costs $<%= second_product.price %>
 </p>
 <p>Seller Name: <%= second_product.user.name %></p>
+<p>--</p>
+<p>Total products in database: <%= Product.count %> </p>
+
