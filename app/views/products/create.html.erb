@@ -1,0 +1,11 @@
+<% product = Product.new(params[:product]) %>
+
+<% if product.save %>
+	<h2>Your product was saved</h2>
+	Product description: <%= product.inspect %>
+<% else %>
+	<h2>Your product WAS NOT saved!</h2>
+	<%= product.errors.full_messages %>
+	Please o back in your browser an fix the problem
+<% end %>
+
